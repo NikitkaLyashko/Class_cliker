@@ -27,9 +27,8 @@ def view():
     wind.blit(text_c,[0,120])
     pygame.draw.rect(wind,[0,0,225],model.rect_green_button,3)
 
-    model.object_3.drow_round(wind)
-    model.object_1.drow_round(wind)
-    model.object_2.drow_round(wind)
+    for view_krug in model.list_krug:
+        view_krug.drow_round(wind)
 
 
 
