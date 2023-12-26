@@ -1,4 +1,4 @@
-import random
+import random,math
 
 import pygame
 class Round():
@@ -18,10 +18,10 @@ class Round():
         self.radius+=nomer
 
     def drow_round(self,place):
-
         pygame.draw.circle(place, [self.color1,self.color2,self.color3], [self.x,self.y], self.radius, 8)
         if self.main_round!=None:
-            pygame.draw.line(place, [self.color1,self.color2,self.color3],[self.x,self.y],[self.main_round.x,self.main_round.y],3)
+            for round in self.main_round:
+                pygame.draw.line(place, [self.color1,self.color2,self.color3],[self.x,self.y],[round.x,round.y],3)
 
     def ride_round(self):
         self.x += self.speed_round_x
@@ -36,7 +36,16 @@ class Round():
             self.speed_round_x=abs(self.speed_round_x)
 
         self.radius+=1
-        if self.radius>100:
-            self.radius=5
+        if self.radius>150:
+            self.radius=150
 
+        self.fix_radius()
+
+    def fix_radius(self):
+        long_line=[]
+        for round in self.main_round:
+            rasstoyanie=math.dist([self.x,self.y],[round.x,round.y])
+            rasstoyanie=rasstoyanie-round.radius
+            long_line.append(int(rasstoyanie))
+        print(long_line)
 # or self.x>=1500 or self.x<=0 or self.y<=0
