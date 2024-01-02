@@ -22,7 +22,7 @@ list_krug=[]
 # object_3=round.Round(50,350,700)
 # object_3.plus_a(3)
 
-for krug in range(10):
+for krug in range(40):
     object_2 = round.Round(random.randint(5,100), random.randint(0,1000), random.randint(0,1000),list_krug)
     object_2.plus_10()
 
@@ -31,7 +31,7 @@ for krug in range(10):
 
 
 
-print(list_krug)
+
 
 
 def model_ride_round():
