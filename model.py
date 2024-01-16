@@ -1,14 +1,16 @@
 import random
 
-import pygame.display,round
+import pygame.display,round,text
 
 money1=0
 levl=1
 
+chislo_monet=text.Text(0, 70, money1)
+
 rect_green_button=pygame.Rect(70,70,70,70)
 rect_green_button.center=[1450,50]
 
-print(rect_green_button)
+# print(rect_green_button)
 
 
 

@@ -59,5 +59,5 @@ class Round():
             self.radius=st_num
             if self.radius<3:
                 self.radius=3
-        print(long_line)
+        # print(long_line)
 # or self.x>=1500 or self.x<=0 or self.y<=0
