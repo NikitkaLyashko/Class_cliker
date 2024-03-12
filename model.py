@@ -6,12 +6,19 @@ import pygame.display,round,text
 chislo_monet=text.Text(0, 70, 0,"У вас ","монет ")
 object_levl=text.Text(0,120,1,"Уровень ","")
 upgrade=text.Text(0,20,10,"Для улучшения надо столько: ","")
+ceichas_mony=text.Text(0,170,2,"За клик столько:","")
+uvel_mony=text.Text(0,220,1,"ЗА апгрейд столько:","")
+
 
 rect_green_button=pygame.Rect(70,70,70,70)
 rect_green_button.center=[1450,50]
 
 def chet_monet():
-    chislo_monet.chislo+=2
+
+    chislo_monet.chislo+=ceichas_mony.chislo
+
+
+
 
 
 def chet_yrovn(collide):
@@ -21,6 +28,10 @@ def chet_yrovn(collide):
         chislo_monet.chislo -= upgrade.chislo
         upgrade.chislo *=1.05
         object_levl.chislo+=1
+
+        ceichas_mony.chislo+=uvel_mony.chislo
+        uvel_mony.chislo += 1
+
 
 
 

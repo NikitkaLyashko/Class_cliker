@@ -1,26 +1,35 @@
 import pygame,round
 
-import model,text as text_mod
+import model,text as text_mod,picture
 pygame.init()
 text=pygame.font.SysFont("Arial",50)
 wind=pygame.display.set_mode([1500,700])
-city = pygame.image.load("sprites/place/place1.jpg")
-worker=pygame.image.load("sprites/worker/worker1.png")
-button_up=pygame.image.load("sprites/controls/up_green.png")
+city=picture.Picture("sprites/place/place1.jpg",[1500,700],0,0)
+woker=picture.Picture("sprites/worker/worker1.png",[160,160],150,500)
+button_up=picture.Picture("sprites/controls/up_green.png",[70,70],model.rect_green_button.x,model.rect_green_button.y)
+woker2=picture.Picture("sprites/worker/worker2_inv.png",[160,180],250,380)
 
 
-city_big=pygame.transform.scale(city, [1500, 700])
-worker_small=pygame.transform.scale(worker,[160,160])
-place_green_button=pygame.transform.scale(button_up,[70,70])
+
+
+
+
+
 
 def view():
-    wind.blit(city_big,[0,0])
-    wind.blit(worker_small,[150,500])
-    wind.blit(place_green_button,model.rect_green_button)
+    city.draw(wind)
+    woker.draw(wind)
+    button_up.draw(wind)
+    woker2.draw(wind)
+
+
+
 
     model.chislo_monet.draw_text(wind)
     model.object_levl.draw_text(wind)
     model.upgrade.draw_text(wind)
+    model.ceichas_mony.draw_text(wind)
+    model.uvel_mony.draw_text((wind))
 
     # model.object_3.drow_round(wind)
 
