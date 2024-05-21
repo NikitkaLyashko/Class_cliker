@@ -9,7 +9,9 @@ upgrade=text.Text(0,20,10,"Для улучшения надо столько: ",
 ceichas_mony=text.Text(0,170,2,"За клик столько:","")
 uvel_mony=text.Text(0,220,1,"ЗА апгрейд столько:","")
 level_2=text.Text(350,380,0,"Уровеь:","",25)
+level_2.chislo=8
 
+print(level_2.new_num)
 
 rect_green_button=pygame.Rect(70,70,70,70)
 rect_green_button.center=[1450,50]
