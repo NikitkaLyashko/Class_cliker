@@ -1,6 +1,6 @@
 import random
 
-import pygame.display,round,text
+import pygame.display,round,text,knopka
 
 
 chislo_monet=text.Text(0, 70, 0,"У вас ","монет ")
@@ -11,7 +11,9 @@ uvel_mony=text.Text(0,220,1,"ЗА апгрейд столько:","")
 level_2=text.Text(350,380,0,"Уровеь:","",25)
 level_2.chislo=8
 
-print(level_2.new_num)
+button_2=knopka.Knopka(370,380,[100,100],"sprites/controls/up_yellow.png")
+put_2=knopka.Knopka(500,500,[100,150],"sprites/controls/up_green.png")
+
 
 rect_green_button=pygame.Rect(70,70,70,70)
 rect_green_button.center=[1450,50]

@@ -5,6 +5,10 @@ import model,text
 
 def cotroller():
     events=pygame.event.get()
+    model.button_2.controller(events)
+    model.put_2.controller(events)
+
+
 
     for event in events:
         if event.type==pygame.QUIT:
