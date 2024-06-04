@@ -22,21 +22,7 @@ def cotroller():
 
         if event.type==pygame.MOUSEBUTTONDOWN:
             model.chet_monet()
-            # model.object_3.color="синий"
-
-            # print(model.object_3.color)
-            model.chet_yrovn(event.pos)
-
-
-
-            #
-            # if button_pos==True and model.money1>=model.up:
-            #     model.money1-=model.up
-            #     model.levl+=1
-            #     model.object_levl.obnovi_chislo(model.levl)
-            #     # print(model.levl)
-
-
+            # model.object_3.color="синий
 
 
 
