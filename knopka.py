@@ -12,8 +12,7 @@ class Knopka():
         self.size=size
         self.def_action=action
 
-        rect_work_2=pygame.Rect(30,30,30,30)
-        rect_work_2.center=[370,380]
+
         self.object_for_draw=picture.Picture(picture1, self.size, self.x, self.y)
         print(("11"))
 
@@ -31,6 +30,7 @@ class Knopka():
 
             if event.type == pygame.MOUSEBUTTONDOWN and rect_for_picture.collidepoint(event.pos):
                 self.def_action()
+
 
                 events.remove(event)
 

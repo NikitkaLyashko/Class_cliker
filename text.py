@@ -19,10 +19,10 @@ class Text():
 
     def draw_text(self,place:pygame.Surface):
         place.blit(self.object,[self.def_x,self.def_y])
-
-    def obnovi_chislo(self,number):
-        self.new_num=number
-        self.object = self.font.render(self.def_stroks+str(int(self.new_num))+self.def_next_str, True, [250, 0, 0])
+    #
+    # def obnovi_chislo(self,number):
+    #     self.new_num=number
+    #     self.object = self.font.render(self.def_stroks+str(int(self.new_num))+self.def_next_str, True, [250, 0, 0])
 
     @property
     def chislo(self):
@@ -35,9 +35,7 @@ class Text():
 
 
 
-test_object=Text(400,400,124,"number","next_stroks",50)
-print(test_object.chislo)
-test_object.chislo=655
+
 
 
 
