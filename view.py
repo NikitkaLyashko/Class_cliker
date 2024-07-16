@@ -23,12 +23,14 @@ def view():
     city.draw(wind)
     woker.draw(wind)
     # woker2.draw(wind)
-    model.put_2.draw((wind))
+    model.put_2.draw(wind)
+    model.put_3.draw(wind)
     model.button_2.draw(wind)
     model.worker_2_2.draw(wind)
+    model.worker_3_3.draw(wind)
 
-
-
+    model.worker2.draw_worker(wind)
+    model.worker3.draw_worker(wind)
 
 
 
@@ -38,6 +40,9 @@ def view():
     model.ceichas_mony.draw_text(wind)
     model.uvel_mony.draw_text((wind))
     model.level_2.draw_text(wind)
+    model.level_3.draw_text(wind)
+    model.doxod_pers.draw_text(wind)
+    model.doxod.draw_text(wind)
     model.stoimost_yellow_button.draw_text(wind)
     # model.object_3.drow_round(wind)
 

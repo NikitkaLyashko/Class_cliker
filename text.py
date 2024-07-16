@@ -15,7 +15,7 @@ class Text():
         self.def_next_str=next_stroka
         self.font = pygame.font.SysFont("Arial", size)
         self.object=self.font.render(self.def_stroks+str(self.new_num)+self.def_next_str, True, [250, 0, 0])
-        print(self.new_num)
+
 
     def draw_text(self,place:pygame.Surface):
         place.blit(self.object,[self.def_x,self.def_y])

@@ -4,7 +4,7 @@ for nd_num in numbers:
     if st_num>nd_num:
         st_num = nd_num
 
-print(st_num)
+
 
 
 

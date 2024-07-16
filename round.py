@@ -48,7 +48,7 @@ class Round():
             self.color2 = 0
             self.color3 = 255
 
-        print(new_color)
+
 
     def ride_round(self):
         self.x += self.speed_round_x
@@ -86,5 +86,5 @@ class Round():
             self.radius = st_num
             if self.radius < 3:
                 self.radius = 3
-        # print(long_line)
+
 # or self.x>=1500 or self.x<=0 or self.y<=0

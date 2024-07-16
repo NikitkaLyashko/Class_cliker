@@ -14,7 +14,7 @@ class Knopka():
 
 
         self.object_for_draw=picture.Picture(picture1, self.size, self.x, self.y)
-        print(("11"))
+
 
 
 
