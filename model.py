@@ -6,7 +6,6 @@ import worker
 
 
 def doxod_v_secundy():
-    print(chislo_monet.chislo)
     chislo_monet.chislo += doxod.chislo
 
 
@@ -42,6 +41,7 @@ def for_worker_2():
 
         # doxod_v_secundy()
         doxod_pers.chislo += 1
+
     worker_2_2 = picture.Picture("sprites/worker/worker2.png", [160, 180], 250, 380)
 
 a=1.05
@@ -79,6 +79,6 @@ put_3=knopka.Knopka(650,500,[100,100],"sprites/controls/up_yellow.png",for_worke
 worker_2_2 = picture.Picture("sprites/worker/worker2_inv.png",[160,180],250,380)
 worker_3_3=picture.Picture("sprites/worker/worker3_inv.png",[160,180],500,500)
 
-worker2=worker.Worker("sprites/worker/worker2_inv.png",250,180,[160,180])
-worker3=worker.Worker("sprites/worker/worker3_inv.png",500,180,[160,180])
+worker2=worker.Worker("sprites/worker/worker2_inv.png",250,180,[160,180],10000,chislo_monet)
+worker3=worker.Worker("sprites/worker/worker3_inv.png",500,180,[160,180],50000,chislo_monet)
 

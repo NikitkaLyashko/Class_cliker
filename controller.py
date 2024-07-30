@@ -2,6 +2,7 @@ import pygame
 
 import model,text
 
+
 free_type = pygame.event.custom_type()
 
 pygame.time.set_timer(free_type, 1000, 0)
@@ -11,6 +12,9 @@ def cotroller():
     model.button_2.controller(events)
     model.put_2.controller(events)
     model.put_3.controller(events)
+
+    model.worker2.controller_worker(events)
+    model.worker3.controller_worker(events)
 
     for event in events:
 
