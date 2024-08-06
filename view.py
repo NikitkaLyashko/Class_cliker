@@ -41,7 +41,7 @@ def view():
     model.uvel_mony.draw_text((wind))
     model.level_2.draw_text(wind)
     model.level_3.draw_text(wind)
-    model.doxod_pers.draw_text(wind)
+    model.doxod_pers1.draw_text(wind)
     model.doxod.draw_text(wind)
     model.stoimost_yellow_button.draw_text(wind)
     # model.object_3.drow_round(wind)

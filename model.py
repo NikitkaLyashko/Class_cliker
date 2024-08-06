@@ -37,10 +37,10 @@ def for_worker_2():
         stoimost_yellow_button.chislo*=a
         a=a+0.02283
         level_2.chislo+=1
-        doxod.chislo+=doxod_pers.chislo
+        doxod.chislo+=doxod_pers1.chislo
 
         # doxod_v_secundy()
-        doxod_pers.chislo += 1
+        doxod_pers1.chislo += 1
 
     worker_2_2 = picture.Picture("sprites/worker/worker2.png", [160, 180], 250, 380)
 
@@ -66,7 +66,7 @@ uvel_mony=text.Text(0,220,1,"ЗА апгрейд столько:","")
 level_2=text.Text(350,380,0,"Уровеь:","",25)
 level_3=text.Text(580,550,0,"Уровеь:","",25)
 doxod=text.Text(700,50,0,"Доход:","",60)
-doxod_pers=text.Text(350,330,1,"Доход:+","",25)
+doxod_pers1=text.Text(350, 330, 1, "Доход:+", "", 25)
 
 
 stoimost_yellow_button=text.Text(470,380,10000,"","")
@@ -79,6 +79,6 @@ put_3=knopka.Knopka(650,500,[100,100],"sprites/controls/up_yellow.png",for_worke
 worker_2_2 = picture.Picture("sprites/worker/worker2_inv.png",[160,180],250,380)
 worker_3_3=picture.Picture("sprites/worker/worker3_inv.png",[160,180],500,500)
 
-worker2=worker.Worker("sprites/worker/worker2_inv.png",250,180,[160,180],10000,chislo_monet)
-worker3=worker.Worker("sprites/worker/worker3_inv.png",500,180,[160,180],50000,chislo_monet)
+worker2=worker.Worker("sprites/worker/worker2_inv.png",250,180,[160,180],10000,chislo_monet,doxod,1,"sprites/worker/worker2.png")
+worker3=worker.Worker("sprites/worker/worker3_inv.png",500,180,[160,180],50000,chislo_monet,doxod,5,"sprites/worker/worker3.png")
 
