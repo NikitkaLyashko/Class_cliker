@@ -30,7 +30,7 @@ def view():
     model.worker_3_3.draw(wind)
 
     model.worker2.draw_worker(wind)
-    model.worker3.draw_worker(wind)
+    # model.worker3.draw_worker(wind)
 
 
 

@@ -7,7 +7,7 @@ import text
 pygame.init()
 
 class Worker():
-    def __init__(self,put,x,y,size,price_abgrade,bank,general_doxod,doxod_person_second,picture_2):
+    def __init__(self, put, x, y, size, price_abgrade, bank, general_doxod, doxod_person_second, picture_2, next_worker):
         self.x=x
         self.y=y
         self.size=size
@@ -16,8 +16,9 @@ class Worker():
         self.general_doxod=general_doxod
         self.doxod_person_second=doxod_person_second
         self.picture_2=picture_2
-
+        self.next_worker=next_worker
         self.ffff = 0
+        self.levl_test=0
 
         self.kopka=knopka.Knopka(x+100,y-50,[50,50],"sprites/controls/up_yellow.png",self.for_worker)
         self.yroven=text.Text(x+50,y-50,0,"уровень","",20)
@@ -30,6 +31,7 @@ class Worker():
         self.worker_2_2 = picture.Picture(put,size,x,y)
 
 
+
     def draw_worker(self,place:pygame.Surface):
         self.kopka.draw(place)
         self.yroven.draw_text(place)
@@ -37,8 +39,16 @@ class Worker():
         self.doxod_pers.draw_text(place)
         if self.ffff==1:
             self.picture_2.draw(place)
+            if self.levl_test>=10 and self.next_worker!=None:
+                self.next_worker.draw_worker(place)
+
+
+
         if self.ffff!=1:
             self.worker_2_2.draw(place)
+
+
+
     def for_worker(self):
         """
         деф for worker вызывается в классе кнопка, при нажатии на кнопку
@@ -56,6 +66,8 @@ class Worker():
             self.general_doxod.chislo += self.doxod_pers.chislo
             self.doxod_pers.chislo += self.doxod_person_second
             self.ffff=1
+            self.levl_test+=1
+
 
 
 
