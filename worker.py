@@ -7,7 +7,7 @@ import text
 pygame.init()
 
 class Worker():
-    def __init__(self, put, x, y, size, price_abgrade, bank, general_doxod, doxod_person_second, picture_2, next_worker):
+    def __init__(self, obvodka, x, y, size, price_abgrade, bank, general_doxod, doxod_person_second, picture_2, next_worker):
         self.x=x
         self.y=y
         self.size=size
@@ -17,8 +17,8 @@ class Worker():
         self.doxod_person_second=doxod_person_second
         self.picture_2=picture_2
         self.next_worker=next_worker
-        self.ffff = 0
         self.levl_test=0
+        self.visible=False
 
         self.kopka=knopka.Knopka(x+100,y-50,[50,50],"sprites/controls/up_yellow.png",self.for_worker)
         self.yroven=text.Text(x+50,y-50,0,"уровень","",20)
@@ -27,25 +27,19 @@ class Worker():
 
         self.picture_2 = picture.Picture(self.picture_2, self.size, self.x, self.y)
 
-
-        self.worker_2_2 = picture.Picture(put,size,x,y)
-
-
+        self.obvodaka_w = picture.Picture(obvodka, size, x, y)
 
     def draw_worker(self,place:pygame.Surface):
         self.kopka.draw(place)
         self.yroven.draw_text(place)
         self.ctoimost_levl.draw_text(place)
         self.doxod_pers.draw_text(place)
-        if self.ffff==1:
+
+        if self.yroven.chislo>=1:
             self.picture_2.draw(place)
-            if self.levl_test>=10 and self.next_worker!=None:
-                self.next_worker.draw_worker(place)
+        else:
+            self.obvodaka_w.draw(place)
 
-
-
-        if self.ffff!=1:
-            self.worker_2_2.draw(place)
 
 
 
@@ -58,6 +52,9 @@ class Worker():
 
         if self.bank.chislo>=self.ctoimost_levl.chislo:
             self.yroven.chislo += 1
+            if self.yroven.chislo>=10:
+                self.next_worker.visible=True
+
             self.bank.chislo-=self.ctoimost_levl.chislo
             self.ctoimost_levl.chislo*=self.a
             self.a=self.a+0.02283
@@ -65,7 +62,6 @@ class Worker():
 
             self.general_doxod.chislo += self.doxod_pers.chislo
             self.doxod_pers.chislo += self.doxod_person_second
-            self.ffff=1
             self.levl_test+=1
 
 
